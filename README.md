@@ -1,1 +1,1 @@
-# blogs-service
+# auth-service
