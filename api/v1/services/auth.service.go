@@ -42,7 +42,7 @@ func (as *AuthService) GetUserByID(ctx context.Context, id string) (*models.GetU
 	return &user, nil
 }
 
-func (us *AuthService) RegisterUser(ctx context.Context, user models.User) (string, string, error) {
+func (us *AuthService) RegisterUser(ctx context.Context, user models.RegisterRequest) (string, string, error) {
 	isTaken, err := us.isUserNameTaken(ctx, user.UserName)
 	if err != nil {
 		return "", "", err

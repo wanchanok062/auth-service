@@ -10,7 +10,7 @@ import (
 )
 
 func (us *AuthService) isUserNameTaken(ctx context.Context, userName string) (bool, error) {
-	var user models.User
+	var user models.RegisterRequest
 	err := us.Collection.FindOne(ctx, bson.M{"username": userName}).Decode(&user)
 
 	if err != nil {

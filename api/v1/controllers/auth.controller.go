@@ -44,7 +44,7 @@ func (ac *AuthController) GetUserByID(c *fiber.Ctx) error {
 }
 
 func (ac *AuthController) RegisterUser(c *fiber.Ctx) error {
-	var user models.User
+	var user models.RegisterRequest
 	if err := c.BodyParser(&user); err != nil {
 		return util.HandleError(c, "Invalid request data", err.Error(), fiber.StatusBadRequest)
 	}
