@@ -5,7 +5,7 @@ import (
 
 	"github.com/go-playground/validator"
 	"github.com/gofiber/fiber/v2"
-	"github.com/wanchanok6698/web-blogs/util"
+	"github.com/wanchanok6698/web-auth/util"
 )
 
 var validation *validator.Validate

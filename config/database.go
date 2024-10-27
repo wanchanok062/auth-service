@@ -41,9 +41,9 @@ func ConnectDB() {
 	fmt.Println("Database status : Connect to MongoDB Succeed!")
 }
 
-func GetBlogCollection() (*mongo.Collection, error) {
+func UserCollection() (*mongo.Collection, error) {
 	if DB == nil {
 		return nil, errors.New("database connection is not initialized")
 	}
-	return DB.Collection("blog"), nil
+	return DB.Collection("user"), nil
 }

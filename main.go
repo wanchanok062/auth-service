@@ -10,8 +10,8 @@ import (
 	"github.com/gofiber/fiber/v2/middleware/logger"
 	"github.com/joho/godotenv"
 	"github.com/sirupsen/logrus"
-	"github.com/wanchanok6698/web-blogs/api/v1/routes"
-	"github.com/wanchanok6698/web-blogs/config"
+	"github.com/wanchanok6698/web-auth/api/v1/routes"
+	"github.com/wanchanok6698/web-auth/config"
 )
 
 func main() {
@@ -41,7 +41,7 @@ func main() {
 	}))
 
 	prefix := os.Getenv("API_PREFIX")
-	routes.BlogRoutes(prefix, app)
+	routes.AuthRoutes(prefix, app)
 
 	log.Fatal(app.Listen("0.0.0.0:" + port))
 }
